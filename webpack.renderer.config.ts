@@ -10,7 +10,18 @@ rules.push({
 
 export const rendererConfig: Configuration = {
   module: {
-    rules,
+    rules: [
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true
+          }
+        }
+      }
+    ]
   },
   plugins,
   resolve: {
