@@ -1,5 +1,10 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import './index.css'; 
 
 const root = createRoot(document.getElementById('root')!);
-root.render(<h1>Hello from React + Electron!</h1>);
+root.render(<div className="flex h-screen items-center justify-center bg-blue-500">
+      <h1 className="text-3xl font-bold text-white">
+        Tailwind v4 in Electron!
+      </h1>
+    </div>);

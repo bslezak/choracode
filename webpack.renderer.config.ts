@@ -20,7 +20,15 @@ export const rendererConfig: Configuration = {
             transpileOnly: true
           }
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader', // Must be at the end of the loader chain
+        ],
+      },
     ]
   },
   plugins,
