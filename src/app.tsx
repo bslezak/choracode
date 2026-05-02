@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { getLogger } from './application/logger';
 import './index.css'; 
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -9,3 +10,6 @@ root.render(<div className="flex h-screen items-center justify-center bg-blue-50
         Tailwind v4 in Electron!
       </h1>
     </div>);
+
+const logger = getLogger();
+logger.info('Renderer process started');
